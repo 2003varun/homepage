@@ -356,7 +356,16 @@ nav{
     left:-35px;
     top:-35px;
 }
+.email-link{
+    color:#dbe8ff;
+    text-decoration:none;
+    transition:.3s ease;
+}
 
+.email-link:hover{
+    color:#ffffff;
+    text-decoration:underline;
+}
 /*==============================
       INFO BOX
 ==============================*/
