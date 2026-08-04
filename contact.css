@@ -411,7 +411,8 @@ nav{
     margin-bottom:4px;
 }
 
-.info-content p{
+.info-content a{
+    text-decoration:none;
     margin:0;
     color:#dbe8ff;
     font-size:15px;
@@ -480,39 +481,24 @@ nav{
 
 .form-group input,
 .form-group textarea{
-
     width:100%;
-
     padding:14px 18px;
-
     border:1px solid #d9e2ef;
-
     border-radius:12px;
-
     outline:none;
-
     font-size:15px;
-
     transition:.3s;
-
     font-family:'Poppins',sans-serif;
-
     background:#fff;
 }
-
 .form-group input:focus,
 .form-group textarea:focus{
-
     border-color:#1456e8;
-
     box-shadow:0 0 0 4px rgba(20,86,232,.10);
 }
-
 .form-group textarea{
-
     resize:none;
 }
-
 /*==============================
         BUTTON
 ==============================*/
@@ -520,21 +506,13 @@ nav{
 .send-btn{
 
     background:linear-gradient(135deg,#1456e8,#0f4fd5);
-
     color:#fff;
-
     border:none;
-
     padding:15px 35px;
-
     border-radius:50px;
-
     cursor:pointer;
-
     font-size:16px;
-
     font-weight:600;
-
     transition:.35s;
 }
 
