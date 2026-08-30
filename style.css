@@ -83,7 +83,11 @@ img{
 ========================================*/
 .logo{
     display:flex;
-    align-items:left;
+    align-items:center;
+}
+.logo a{
+    display:flex;
+    align-items:center;
 }
 .logo img{
     height:90px;
@@ -91,6 +95,7 @@ img{
     margin-left:-50px;
     width:auto;
     transition:.4s;
+    flex-shrink:0;
 }
 .logo:hover img{
     transform:scale(1.05);
@@ -121,9 +126,6 @@ nav{
 .nav-links a:hover{
     color:var(--primary);
 }
-/* .nav-links a.active{
-    color:var(--primary);
-} */
 /* animated underline */
 .nav-links a::after{
     content:"";
@@ -756,6 +758,7 @@ nav{
     align-items:flex-start;
     gap:12px;
     margin-bottom:18px;
+    cursor: pointer;
 }
 .contact-item i{
     width:20px;
@@ -765,6 +768,7 @@ nav{
 
 .social-links{
     justify-content:flex-start;
+    cursor: pointer;
 }
 .footer-section h3,
 .footer-section h4{

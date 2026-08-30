@@ -1,8 +1,14 @@
+```css
 /*=========================
         GOOGLE FONT
 ==========================*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*=========================
+        ROOT VARIABLES
+==========================*/
 
 :root{
     --primary:#1456e8;
@@ -11,6 +17,7 @@
     --text:#1e293b;
     --transition:.35s ease;
 }
+
 
 /*=========================
         RESET
@@ -28,19 +35,26 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-      background:#F7FAFD;
+    background:#F7FAFD;
     color:#1F2937;
-        overflow-x:hidden;
+    overflow-x:hidden;
 }
+
 img{
     max-width:100%;
-   display:block;
+    display:block;
 }
+
+ul{
+    list-style:none;
+}
+
 .container{
     width:90%;
     max-width:1280px;
     margin:auto;
 }
+
 
 /*=========================
         HEADER
@@ -55,20 +69,33 @@ img{
     z-index:999;
     box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
-/* Navbar */
+
+
+/*=========================
+        NAVBAR
+==========================*/
+
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
     height:70px;
-    padding: 0;
+    padding:0;
 }
-/*========================================
- LOGO
-========================================*/
+
+
+/*=========================
+        LOGO
+==========================*/
+
 .logo{
     display:flex;
-    align-items:left;
+    align-items:center;
+}
+
+.logo a{
+    display:flex;
+    align-items:center;
 }
 
 .logo img{
@@ -77,33 +104,27 @@ img{
     margin-left:-50px;
     width:auto;
     transition:.4s;
+    flex-shrink:0;
 }
+
 .logo:hover img{
     transform:scale(1.05);
 }
 
-/* .logo h4{
-    color:#000;
-    font-style:italic;
-    font-size:18px;
-    white-space:nowrap;
-    margin-top:20px;
-    text-decoration:none;
-} */
 
-/*========================================
- NAVIGATION
-========================================*/
+/*=========================
+        NAVIGATION
+==========================*/
+
 nav{
     margin-left:auto;
 }
+
 .nav-links{
     list-style:none;
     display:flex;
     align-items:center;
     gap:38px;
-    width:100%;
-    JUSTIFY-CONTENT:SPACE-BETWEEN;
 }
 
 .nav-links li{
@@ -117,13 +138,16 @@ nav{
     text-decoration:none;
     transition:var(--transition);
     padding:6px 0;
-  
 }
+
 .nav-links a:hover,
 .nav-links a.active{
     color:var(--primary);
 }
-/* animated underline */
+
+
+/* Animated underline */
+
 .nav-links a::after{
     content:"";
     position:absolute;
@@ -141,11 +165,17 @@ nav{
     width:100%;
 }
 
+
+/*=========================
+        HAMBURGER
+==========================*/
+
 .hamburger{
     display:none;
     font-size:24px;
     cursor:pointer;
 }
+
 
 /*=========================
         HERO
@@ -219,6 +249,11 @@ nav{
     margin:auto;
 }
 
+
+/*=========================
+        HERO BUTTONS
+==========================*/
+
 .hero-buttons{
     margin-top:45px;
     display:flex;
@@ -255,6 +290,7 @@ nav{
     background:#fff;
     color:#1456e8;
 }
+
 
 /*==========================================
             CONTACT SECTION
@@ -295,6 +331,7 @@ nav{
     line-height:1.8;
 }
 
+
 /*==============================
       CONTACT LAYOUT
 ==============================*/
@@ -303,11 +340,12 @@ nav{
     display:grid;
     grid-template-columns:330px 1fr;
     gap:35px;
-    align-items:stretch;   /* Makes both columns equal height */
+    align-items:stretch;
 }
 
+
 /*==============================
-      LEFT CARD
+      LEFT CONTACT CARD
 ==============================*/
 
 .contact-card{
@@ -318,7 +356,6 @@ nav{
     border-radius:24px;
     padding:25px;
     box-shadow:0 18px 45px rgba(20,86,232,.20);
-    
 }
 
 .contact-logo{
@@ -336,6 +373,11 @@ nav{
     line-height:1.7;
     margin-bottom:30px;
 }
+
+
+/*==============================
+      DECORATIVE CIRCLES
+==============================*/
 
 .card-circle{
     position:absolute;
@@ -356,16 +398,8 @@ nav{
     left:-35px;
     top:-35px;
 }
-.email-link{
-    color:#dbe8ff;
-    text-decoration:none;
-    transition:.3s ease;
-}
 
-.email-link:hover{
-    color:#ffffff;
-    text-decoration:underline;
-}
+
 /*==============================
       INFO BOX
 ==============================*/
@@ -376,6 +410,11 @@ nav{
     margin-bottom:22px;
     align-items:flex-start;
 }
+
+
+/*==============================
+      INFO ICON
+==============================*/
 
 .info-icon{
     width:50px;
@@ -396,6 +435,11 @@ nav{
     font-size:18px;
 }
 
+
+/*==============================
+      INFO HOVER
+==============================*/
+
 .info-box:hover .info-icon{
     background:#fff;
     transform:translateY(-3px);
@@ -405,19 +449,86 @@ nav{
     color:#1456e8;
 }
 
+
+/*==============================
+      INFO CONTENT
+==============================*/
+
 .info-content h4{
     color:#fff;
     font-size:17px;
     margin-bottom:4px;
 }
 
-.info-content a{
-    text-decoration:none;
-    margin:0;
+.info-content p{
     color:#dbe8ff;
     font-size:15px;
     line-height:1.6;
+    margin:0;
 }
+
+
+/*================================================
+      CLICKABLE EMAIL - CONTACT CARD
+================================================*/
+
+.email-info-link{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    width:100%;
+
+    color:inherit;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.email-info-link .info-icon{
+    flex-shrink:0;
+}
+
+.email-info-link .info-content{
+    flex:1;
+}
+
+.email-info-link .info-content h4{
+    color:#fff;
+    font-size:17px;
+    margin-bottom:4px;
+}
+
+.email-info-link .info-content p{
+    color:#dbe8ff;
+    font-size:15px;
+    line-height:1.6;
+    margin:0;
+}
+
+.email-info-link:hover{
+    text-decoration:none;
+}
+
+.email-info-link:hover .info-content p{
+    color:#fff;
+    text-decoration:underline;
+}
+
+
+/*==============================
+      OLD EMAIL LINK SUPPORT
+==============================*/
+
+.email-link{
+    color:#dbe8ff;
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+.email-link:hover{
+    color:#fff;
+    text-decoration:underline;
+}
+
 
 /*==============================
       SOCIAL
@@ -450,6 +561,7 @@ nav{
     color:#1456e8;
     transform:translateY(-5px);
 }
+
 
 /*==============================
         FORM
@@ -491,20 +603,23 @@ nav{
     font-family:'Poppins',sans-serif;
     background:#fff;
 }
+
 .form-group input:focus,
 .form-group textarea:focus{
     border-color:#1456e8;
     box-shadow:0 0 0 4px rgba(20,86,232,.10);
 }
+
 .form-group textarea{
     resize:none;
 }
+
+
 /*==============================
-        BUTTON
+        SEND BUTTON
 ==============================*/
 
 .send-btn{
-
     background:linear-gradient(135deg,#1456e8,#0f4fd5);
     color:#fff;
     border:none;
@@ -517,98 +632,55 @@ nav{
 }
 
 .send-btn i{
-
     margin-right:10px;
 }
 
 .send-btn:hover{
-
     transform:translateY(-4px);
-
     box-shadow:0 15px 30px rgba(20,86,232,.25);
 }
 
-/*==============================
-      RESPONSIVE
-==============================*/
 
-@media(max-width:991px){
-
-.contact-wrapper{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.contact-heading h2{
-
-font-size:34px;
-
-}
-
-.form-row{
-
-grid-template-columns:1fr;
-
-}
-
-.contact-form-box{
-
-padding:30px;
-
-}
-
-.contact-card{
-
-padding:30px;
-
-}
-
-}
-
-/*=========================
+/*========================================
         FOOTER
-==========================*/
+========================================*/
+
 .footer{
     background:#0f172a;
     color:#fff;
     padding:35px 0 0;
-    /* height:auto; */
 }
-.footer-content{
-    display: flex;
-    grid-template-columns: 320px 1fr;
-    justify-content: space-between;
-    align-items: flex-start;
 
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
 }
+
 .company-info{
-    text-align: left;
-    max-width: 550px;
+    text-align:left;
+    max-width:550px;
 }
+
 .contact-info{
-    margin-left: auto;
-    text-align: left;
-    min-width: 280px;
+    margin-left:auto;
+    text-align:left;
+    min-width:280px;
 }
+
 .contact-item{
     display:flex;
     align-items:flex-start;
     gap:12px;
     margin-bottom:18px;
 }
+
 .contact-item i{
     width:20px;
     color:#3b82f6;
     margin-top:3px;
 }
-.social-links{
-    justify-content:flex-start;
-}
+
 .footer-section h3,
 .footer-section h4{
     margin-bottom:18px;
@@ -640,21 +712,69 @@ padding:30px;
     text-decoration:none;
     transition:.3s;
 }
+
 .footer-section ul li a:hover{
     color:#3b82f6;
     padding-left:5px;
 }
+
+
+/*========================================
+      FOOTER CLICKABLE EMAIL
+========================================*/
+
+.footer-email-link{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    width:100%;
+
+    color:#cbd5e1;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.footer-email-link i{
+    width:20px;
+    color:#3b82f6;
+    margin-top:3px;
+    margin-right:0;
+}
+
+.footer-email-link span{
+    color:#cbd5e1;
+    transition:.3s ease;
+}
+
+.footer-email-link:hover{
+    text-decoration:none;
+}
+
+.footer-email-link:hover span{
+    color:#3b82f6;
+    text-decoration:underline;
+}
+
+
+/*==============================
+      FOOTER ICONS
+==============================*/
 
 .footer-section i{
     color:#3b82f6;
     margin-right:10px;
 }
 
+
+/*==============================
+      SOCIAL LINKS
+==============================*/
+
 .social-links{
     margin-top:20px;
     display:flex;
     gap:15px;
-    justify-content: flex-start;
+    justify-content:flex-start;
 }
 
 .social-links a{
@@ -662,17 +782,26 @@ padding:30px;
     height:40px;
     border-radius:50%;
     background:#1e293b;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     color:#fff;
     transition:.3s;
     text-decoration:none;
 }
+
 .social-links a:hover{
     background:#2563eb;
     transform:translateY(-5px);
 }
+
+
+/*==============================
+      FOOTER BOTTOM
+==============================*/
+
 .footer-bottom{
     margin-top:50px;
     text-align:center;
@@ -680,22 +809,39 @@ padding:30px;
     border-top:1px solid rgba(255,255,255,.1);
     color:#94a3b8;
     font-size:12px;
-    text-align:center;
-}
-html {
-    scroll-behavior: smooth;
-}
-::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    display: none;
 }
 
-/*=========================
-        RESPONSIVE
-==========================*/
+
+/*==============================
+      HIDE SCROLLBAR
+==============================*/
+
+::-webkit-scrollbar{
+    width:0;
+    height:0;
+    display:none;
+}
+
+
+/*========================================
+        RESPONSIVE - TABLET
+========================================*/
+
+@media(max-width:991px){
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/*========================================
+        RESPONSIVE - MOBILE
+========================================*/
 
 @media(max-width:768px){
+
     .navbar{
         min-height:80px;
     }
@@ -714,17 +860,38 @@ html {
         right:-100%;
         width:260px;
         height:calc(100vh - 80px);
+
         background:#fff;
+
         flex-direction:column;
         align-items:center;
         gap:30px;
+
         padding-top:40px;
+
         transition:.4s;
+
         box-shadow:-5px 0 20px rgba(0,0,0,.1);
     }
 
     .nav-links.active{
         right:0;
+    }
+
+    .contact-heading h2{
+        font-size:34px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .contact-form-box{
+        padding:30px;
+    }
+
+    .contact-card{
+        padding:30px;
     }
 
     .hero h1{
@@ -738,4 +905,65 @@ html {
     .hero{
         padding:100px 25px;
     }
+
+    .footer-content{
+        flex-direction:column;
+        gap:35px;
+    }
+
+    .contact-info{
+        margin-left:0;
+        min-width:0;
+        width:100%;
+    }
+
+    .company-info{
+        max-width:100%;
+    }
+
 }
+```
+
+### One HTML change is still required
+
+The CSS alone cannot make your icon open Gmail. In your HTML, replace your current **Email info-box** with this exact block:
+
+```html id="f2a731"
+<div class="info-box">
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@q-dat.com&su=Enquiry%20from%20Q-DAT%20IT%20Solutions"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="email-info-link">
+
+        <div class="info-icon">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div class="info-content">
+            <h4>Email</h4>
+            <p>sales@q-dat.com</p>
+        </div>
+
+    </a>
+
+</div>
+```
+
+And replace the **footer email** with:
+
+```html id="a7e194"
+<div class="contact-item">
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@q-dat.com&su=Enquiry%20from%20Q-DAT%20IT%20Solutions"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="footer-email-link">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <span>sales@q-dat.com</span>
+
+    </a>
+
+</div>
