@@ -75,7 +75,7 @@ export default function ContactPage() {
           <div className="contact-wrapper">
             {/* LEFT CONTACT INFO CARD */}
             <div className="contact-card">
-              <img src="/assets/logo.png" alt="Q-DAT Logo" className="contact-logo" />
+              {/* <img src="/assets/logo.png" alt="Q-DAT Logo" className="contact-logo" /> */}
 
               <h3>Contact Information</h3>
               <p className="card-text">
