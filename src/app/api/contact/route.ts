@@ -42,7 +42,7 @@ export async function POST(request: Request) {
         <h3>Message:</h3>
         <p>${message.replace(/\n/g, '<br />')}</p>
       `,
-      reply_to: email, // Let the sales team reply directly to the sender
+      replyTo: email, // Let the sales team reply directly to the sender
     });
 
     if (error) {
