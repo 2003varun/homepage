@@ -1,5 +1,8 @@
-import React from 'react';
+// import React from 'react';
+
+"use client";
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import {
   FaArrowRight,
   FaShieldHalved,
@@ -10,15 +13,46 @@ import {
   FaHeadset
 } from 'react-icons/fa6';
 import ProcessSection from '@/components/ProcessSection';
-
+      const heroServices = [
+  {
+    title: "Data Entry",
+    description: "Accurate and reliable data entry services for your business.",
+    icon: "▣",
+  },
+  {
+    title: "Data Management",
+    description: "Organize, maintain and manage your business data efficiently.",
+    icon: "▤",
+  },
+  // {
+  //   title: "Web Applications",
+  //   description: "Custom web applications tailored to your business needs.",
+  //   icon: "</>",
+  // },
+  // {
+  //   title: "Cloud Infrastructure",
+  //   description: "Secure, scalable and flexible cloud solutions for your future.",
+  //   icon: "☁",
+  // },
+  {
+    title: "Testing",
+    description: "Ensure accuracy, consistency and high-quality output.",
+    icon: "✓",
+  },
+  {
+    title: "Digital Transformation",
+    description: "Modernize your business with smart digital solutions.",
+    icon: "↗",
+  },
+];
 export default function HomePage() {
   return (
     <>
+
       {/* ================= HERO SECTION ================= */}
       <section className="hero">
         <div className="hero-glow" />
         <div className="hero-glow-alt" />
-
         <div className="container hero-container">
           <div className="hero-content">
             <span className="hero-tag">
@@ -26,7 +60,7 @@ export default function HomePage() {
             </span>
 
             <h1 className="hero-title">
-              Smart IT Solutions <br />
+              Smart Solutions <br />
               <span className="gradient-text">For Modern Enterprises</span>
             </h1>
 
@@ -47,22 +81,31 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero-image-wrapper">
-            {/* <div className="hero-image-card">
-              <img src="/assets/building.jpg" alt="Q-DAT IT Solutions Headquarters" />
-            </div>
-            <div className="hero-floating-badge">
-              <div className="hero-floating-icon">
-                <FaHeadset />
-              </div>
-              <div>
-                <strong>Reliable Delivery</strong>
-                <p style={{ margin: 0, fontSize: '0.82rem', color: '#64748B' }}>
-                  24/7 SLA Support
-                </p>
-              </div>
-            </div> */}
+      <div className="hero-image-wrapper">
+
+  <div className="hero-services-carousel">
+
+    <div className="hero-services-track marquee-track">
+      {[...heroServices, ...heroServices].map((service, index) => (
+        <div
+          key={`${service.title}-${index}`}
+          className="hero-service-card"
+        >
+          <div className="hero-service-icon">
+            {service.icon}
           </div>
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+          <span className="hero-service-link">
+            Learn More <FaArrowRight size={11} />
+          </span>
+        </div>
+      ))}
+    </div>
+
+
+  </div>
+</div>
         </div>
       </section>
 

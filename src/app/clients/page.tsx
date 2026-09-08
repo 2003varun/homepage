@@ -11,25 +11,96 @@ export const metadata: Metadata = {
 
 const testimonials = [
   {
-    quote:
-      'Q-DAT Data Entry Service team has performed exceptionally high quality work under very tight deadlines. They were willing to meet all our requests for changing timelines. Additionally, Q-DAT worked with us at every step of the way to ensure top quality results and innovative concepts. We happily recommend Q-DAT Data Entry Services.',
+     name: 'Brian Goss',
     author: 'Senior Operations Director',
     company: 'Enterprise Software Partner',
     rating: 5,
-  },
-  {
+    image: '/images/testimonials/Brian Goss.png',
     quote:
-      'Working with Q-DAT on our catalog data migration and quality testing significantly cut our turnaround time. Their dedication to 99.9% data accuracy was evident from day one.',
+      'Q-Dat has been providing sales data management and outreach services for us (Applied Digital Solutions) for almost a year now and with each month I am more and more impressed with the dedication and their relentless pursuit to add value to our processes. Raghav and team go the extra mile to ensure an awesome customer experience. We are finding more and more areas where Q-Dat can help us better manage our CRM sales data. I highly recommend them!',
+  },
+
+  {
+  name: 'Ana Bejan',
+quote: 'Working with Q-dat over the past year has been an exceptional experience. Their promptness and efficiency in completing assigned tasks have been commendable. What truly sets Raghav and his team apart is their remarkable communication. Whether it\'s addressing queries promptly or providing regular updates, their team\'s responsiveness has been invaluable. I highly recommend Q-dat for their professionalism and dedication to seamless collaboration.',
     author: 'VP of Technology',
     company: 'Global E-Commerce Brand',
     rating: 5,
+    image: '/images/testimonials/Ana BEjan.png',
   },
-  {
+     {
+      name: 'Spree Hotels Reservations',
     quote:
-      'The custom ERP tools and ongoing back-office support delivered by Q-DAT gave our internal team complete peace of mind. Highly professional and dependable.',
+      ' We thank the team of Q-Data for offering their excellent services from last 7 to 8 years. This is a team of professional and dedicated people and we are happy to be associated for our data management solutions, with you. Keep up the good work...',
     author: 'Head of IT Infrastructure',
     company: 'Logistics & Supply Chain Group',
     rating: 5,
+    image: '/images/testimonials/spree.jpg',
+  },
+     {
+      name: 'Dnyaneshwar Darekar',
+    quote:'We’ve been working with Q DAT for our data management and enrichment requirements, and their team has consistently delivered accurate, high-quality outputs on time. They understand complex business structures and maintain excellent communication throughout each project. A reliable and professional partner for any organization looking to scale data operations. Highly recommended!',
+    author: 'Head of IT Infrastructure',
+    company: 'Logistics & Supply Chain Group',
+    rating: 5,
+    image: '/images/testimonials/it-infrastructure.jpg',
+  },
+
+  {
+    name: 'Thaslin Milani',
+    quote:
+      'We had a great experience working with the Qdat team. They are highly professional, punctual, and supportive. I truly appreciate their efforts and excellent service. Highly recommended!',
+    author: 'Head of IT Infrastructure',
+    company: 'Logistics & Supply Chain Group',
+    rating: 5,
+    image: '/images/testimonials/it-infrastructure.jpg',
+  },
+
+  
+       {
+        name: 'Ramara321',
+    quote:
+      'Truehomes24 has been associated with Q-dat team for Data Entry services for the last 6 months. Q-dat team is very dedicated, sincere, committed and delivered us high quality, excellent and error free data entry services. Their services are incomparable with any one. Q-dat services are simply "Superb& Excellent".',
+    author: 'Head of IT Infrastructure',
+    company: 'Logistics & Supply Chain Group',
+    rating: 5,
+    image: '/images/testimonials/it-infrastructure.jpg',
+  },
+    {
+      name: 'Worksafe Organisation',
+    quote:
+      ' We admire their commitment to deliver, good infrastructure, talented team. They are providing un interrupted services since 8 years.',
+    author: 'Head of IT Infrastructure',
+    company: 'Logistics & Supply Chain Group',
+    rating: 5,
+    image: '/images/testimonials/it-infrastructure.jpg',
+  },
+    {
+      name: 'Veena Masurkar',
+    quote:
+      '"Raghav and his team helped us with all our data entry needs, which allowed us to focus on everything else we had on our plate. They were a breeze to work with, and very attentive to all the details in our requests. Overall great business!"',
+    author: 'Head of IT Infrastructure',
+    company: 'Logistics & Supply Chain Group',
+    rating: 5,
+    image: '/images/testimonials/it-infrastructure.jpg',
+  },
+      {
+        name: 'Chaitanya K V ',
+    quote:
+      ' Good Quality Data Services and Excellent Team !! We like to work with them again they keep updating each and everything they have a capable team to provide very good services !!!!!!',
+    author: 'Head of IT Infrastructure',
+    company: 'Logistics & Supply Chain Group',
+    rating: 5,
+    image: '/images/testimonials/it-infrastructure.jpg',
+  },
+      {
+          name: 'Nikhil Satish ',
+    quote:
+      ' It has been a pleasure to work with Raghav, Shweta and team. Prompt, responsive and good quality work.',
+    author: 'Head of IT Infrastructure',
+    company: 'Logistics & Supply Chain Group',
+    rating: 5,
+    image: '/images/testimonials/it-infrastructure.jpg',
   },
 ];
 
@@ -60,7 +131,7 @@ export default function ClientsPage() {
       </section>
 
       {/* ================= TESTIMONIALS GRID ================= */}
-      <section className="services-section">
+      {/* <section className="services-section">
         <div className="container">
           <div className="section-header">
             <span className="section-badge">CLIENT VOICES</span>
@@ -74,29 +145,104 @@ export default function ClientsPage() {
           </div>
 
           <div className="services-grid">
-            {testimonials.map((t, index) => (
-              <div key={index} className="service-card featured-service">
-                <div style={{ display: 'flex', gap: '4px', color: '#F59E0B', marginBottom: '16px' }}>
-                  {[...Array(t.rating)].map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
-                <p style={{ fontStyle: 'italic', fontSize: '0.98rem', lineHeight: '1.7', color: 'var(--text-main)' }}>
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div style={{ marginTop: 'auto', paddingTop: '20px', borderTop: '1px solid var(--border-color)' }}>
-                  <h4 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--secondary)', marginBottom: '2px' }}>
-                    {t.author}
-                  </h4>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 500 }}>
-                    {t.company}
-                  </span>
-                </div>
-              </div>
-            ))}
+            {testimonials.map((testimonial, index) => (
+  <div className="testimonial-card" key={index}>
+
+    <img
+      src={testimonial.image}
+      alt="avatar"
+      className="testimonial-image"
+    />
+
+    <div className="testimonial-rating">
+      {"★".repeat(testimonial.rating)}
+    </div>
+<div className="testimonial-author">
+    <strong>{testimonial.name}</strong><br/>
+  <span>{testimonial.author}</span><br/>
+  <small>{testimonial.company}</small>
+
+    </div>
+    <p className="testimonial-quote">
+      "{testimonial.quote}"
+    </p>
+
+    
+
+  </div>
+))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <section className="services-section testimonials-section">
+  <div className="container">
+
+    <div className="section-header">
+      <span className="section-badge">CLIENT VOICES</span>
+
+      <h2 className="section-title">
+        What Our <span>Partners Say</span>
+      </h2>
+
+      <p className="section-desc">
+        Long-term partnerships founded on trust, transparent communication,
+        and consistent delivery excellence.
+      </p>
+    </div>
+
+    <div className="services-grid testimonials-grid">
+
+      {testimonials.map((testimonial, index) => (
+        <div className="testimonial-card" key={index}>
+
+          {/* TOP */}
+          <div className="testimonial-top">
+
+            <img
+              src={testimonial.image}
+              alt={testimonial.name}
+              className="testimonial-image"
+            />
+
+            <div className="testimonial-rating">
+              {"★".repeat(testimonial.rating)}
+            </div>
+
+          </div>
+
+    {/* AUTHOR */}
+          <div className="testimonial-author">
+
+            <strong>
+              {testimonial.name}
+            </strong>
+
+            {/* <span>
+              {testimonial.author}
+            </span>
+
+            <small>
+              {testimonial.company}
+            </small> */}
+
+          </div>
+
+          {/* QUOTE */}
+          <p className="testimonial-quote">
+            "{testimonial.quote}"
+          </p>
+
+
+      
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
       {/* ================= TRUST HIGHLIGHTS ================= */}
       <section className="why-section">

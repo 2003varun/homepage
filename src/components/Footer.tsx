@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="container footer-content">
         {/* Company Overview */}
         <div className="footer-section">
-          <img src="/assets/logo.png" alt="Q-DAT IT Solutions Logo" className="footer-logo" />
+          {/* <img src="/assets/logo.png" alt="Q-DAT IT Solutions Logo" className="footer-logo" /> */}
           <h3 className="footer-title">Q-DAT IT SOLUTIONS</h3>
           <p className="footer-desc">
             Delivering industry-leading Data Entry Services, Enterprise Data Management,
@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div className="footer-section">
+        {/* <div className="footer-section">
           <h4>Quick Links</h4>
           <ul className="footer-links">
             <li>
@@ -86,10 +86,10 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Core Services */}
-        <div className="footer-section">
+        {/* <div className="footer-section">
           <h4>Our Services</h4>
           <ul className="footer-links">
             <li>
@@ -123,7 +123,7 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Contact Information */}
         <div className="footer-section">
