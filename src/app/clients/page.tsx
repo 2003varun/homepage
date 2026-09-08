@@ -10,6 +10,15 @@ export const metadata: Metadata = {
 };
 
 const testimonials = [
+   {
+        name: 'NG NG',
+    quote:
+      ' We have been working with Q-Dat for over 5 years now for our Data Management for e-commerce in London and they have always been an absolute pleasure to work with. It was the best decision we could have made, aside from a competitive pricing structure, the team there work with you to taper a service to support your individual business needs. Support response times are swift and carried out in a polite and caring manner. We would highly recommend Q-Dat to anyone. They also have a friendly, efficient and knowledgeable team at hand to deal with all of our Business need',
+    author: 'Head of IT Infrastructure',
+    company: 'Logistics & Supply Chain Group',
+    rating: 5,
+    image: '/images/testimonials/ngng.png',
+  },
   {
      name: 'Brian Goss',
     author: 'Senior Operations Director',
@@ -63,15 +72,7 @@ quote: 'Working with Q-dat over the past year has been an exceptional experience
     rating: 5,
     image: '/images/testimonials/chaitanya.png',
   },
-      {
-        name: 'NG NG',
-    quote:
-      ' We have been working with Q-Dat for over 5 years now for our Data Management for e-commerce in London and they have always been an absolute pleasure to work with. It was the best decision we could have made, aside from a competitive pricing structure, the team there work with you to taper a service to support your individual business needs. Support response times are swift and carried out in a polite and caring manner. We would highly recommend Q-Dat to anyone. They also have a friendly, efficient and knowledgeable team at hand to deal with all of our Business need',
-    author: 'Head of IT Infrastructure',
-    company: 'Logistics & Supply Chain Group',
-    rating: 5,
-    image: '/images/testimonials/ngng.png',
-  },
+     
   {
     name: 'Thaslin Milani',
     quote:
