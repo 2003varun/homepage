@@ -164,7 +164,7 @@ export default function ContactPage() {
                 >
                   <FaLinkedinIn />
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="social-icon-btn"
                   aria-label="Instagram"
@@ -177,7 +177,7 @@ export default function ContactPage() {
                   aria-label="Twitter"
                 >
                   <FaXTwitter />
-                </a>
+                </a> */}
               </div>
             </div>
 

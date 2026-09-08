@@ -41,13 +41,13 @@ export default function Footer() {
             >
               <FaLinkedinIn />
             </a>
-            <a
+            {/* <a
               href="#"
               className="social-icon-btn"
               aria-label="Twitter"
             >
               <FaTwitter />
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -77,7 +77,11 @@ export default function Footer() {
           </div>
           <div className="footer-contact-item">
             <FaEnvelope size={16} />
-            <a href="mailto:sales@q-dat.com">sales@q-dat.com</a>
+             <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@q-dat.com&su=Enquiry%20from%20Q-DAT%20IT%20Solutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >sales@q-dat.com</a>
           </div>
         </div>
       </div>
