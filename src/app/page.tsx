@@ -96,9 +96,9 @@ export default function HomePage() {
           </div>
           <h3>{service.title}</h3>
           <p>{service.description}</p>
-          <span className="hero-service-link">
+          {/* <Link href="/services" className="hero-service-link">
             Learn More <FaArrowRight size={11} />
-          </span>
+          </Link> */}
         </div>
       ))}
     </div>

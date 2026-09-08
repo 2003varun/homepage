@@ -12,6 +12,8 @@ import {
   FaShieldHalved,
   FaCloudArrowUp,
   FaChartLine,
+  FaHeadset,
+  FaClipboardList,
 } from 'react-icons/fa6';
 
 export const metadata: Metadata = {
@@ -37,14 +39,14 @@ const servicesList = [
     desc: 'End-to-end data management solutions designed to cleanse, validate, organize, and safeguard mission-critical business data repositories.',
     features: ['Data Cleansing & Scrubbing', 'Database Migration', 'Data Enrichment', 'Non-Voice Back-Office Operations'],
   },
-  {
-    icon: FaLaptopCode,
-    title: 'Application Development',
-    badge: 'CUSTOM SOFTWARE',
-    featured: false,
-    desc: 'Custom enterprise software, ERP applications, and scalable backend systems tailored to simplify core business workflows.',
-    features: ['Custom ERP Solutions', 'Enterprise Web Apps', 'RESTful API Engineering', 'Legacy Modernization'],
-  },
+  // {
+  //   icon: FaLaptopCode,
+  //   title: 'Application Development',
+  //   badge: 'CUSTOM SOFTWARE',
+  //   featured: false,
+  //   desc: 'Custom enterprise software, ERP applications, and scalable backend systems tailored to simplify core business workflows.',
+  //   features: ['Custom ERP Solutions', 'Enterprise Web Apps', 'RESTful API Engineering', 'Legacy Modernization'],
+  // },
   {
     icon: FaCircleCheck,
     title: 'Quality Assurance & Testing',
@@ -53,14 +55,14 @@ const servicesList = [
     desc: 'Comprehensive automated and manual QA software testing methodologies to guarantee robust, bug-free, and high-performance applications.',
     features: ['Functional Testing', 'Performance & Load Testing', 'Security & Compliance Checks', 'Cross-Platform Testing'],
   },
-  {
-    icon: FaGlobe,
-    title: 'Web Designing & UI/UX',
-    badge: 'CREATIVE',
-    featured: false,
-    desc: 'Aesthetic, responsive, and conversion-optimized websites and digital experiences built to elevate brand prestige and client engagement.',
-    features: ['Responsive UI/UX Design', 'Corporate Portals', 'E-Commerce Platforms', 'Conversion Rate Optimization'],
-  },
+  // {
+  //   icon: FaGlobe,
+  //   title: 'Web Designing & UI/UX',
+  //   badge: 'CREATIVE',
+  //   featured: false,
+  //   desc: 'Aesthetic, responsive, and conversion-optimized websites and digital experiences built to elevate brand prestige and client engagement.',
+  //   features: ['Responsive UI/UX Design', 'Corporate Portals', 'E-Commerce Platforms', 'Conversion Rate Optimization'],
+  // },
   {
     icon: FaServer,
     title: 'IT Infrastructure & Cloud',
@@ -68,6 +70,22 @@ const servicesList = [
     featured: false,
     desc: 'Dependable IT infrastructure setup, cloud migration, server management, and continuous network monitoring.',
     features: ['Cloud Setup & Management', 'IT Security & Backups', 'Virtualization Solutions', '24/7 SLA Technical Support'],
+  },
+  {
+    icon: FaHeadset,
+    title: 'Application support activities',
+    badge: 'SUPPORT',
+    featured: false,
+    desc: 'Reliable application support to keep business systems running smoothly through continuous monitoring, troubleshooting, maintenance, and timely issue resolution.',
+    features: ['Application Monitoring & Support', 'Issue Troubleshooting & Resolution', 'System Maintenance & Updates', 'User & Technical Assistance'],
+  },
+  {
+    icon: FaClipboardList,
+    title: 'Back Office Activities',
+    badge: 'BACK OFFICE',
+    featured: false,
+    desc: 'Efficient back-office support covering data management, document processing, order administration, reconciliation, and day-to-day business operations.',
+    features: ['Data Entry & Management', 'Document & Order Processing', 'Invoice & PO Reconciliation', 'Administrative Support'],
   },
 ];
 
@@ -89,10 +107,10 @@ export default function ServicesPage() {
             infrastructure, discover how Q-DAT scales your operational efficiency.
           </p>
           <div className="hero-actions" style={{ justifyContent: 'center' }}>
-            <Link href="/contact" className="btn-primary">
+            {/* <Link href="/contact" className="btn-primary">
               <span>Request a Quote</span>
               <FaArrowRight size={13} />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

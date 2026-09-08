@@ -29,9 +29,21 @@ export default function ContactForm() {
     setStatus('submitting');
     setErrorMessage('');
 
-    // Simulate sending or trigger email compose
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
       setStatus('success');
       setFormData({
         name: '',
@@ -40,9 +52,11 @@ export default function ContactForm() {
         subject: '',
         message: '',
       });
-    } catch {
+    } catch (error: any) {
       setStatus('error');
-      setErrorMessage('Something went wrong. Please try again or email us directly at sales@q-dat.com.');
+      setErrorMessage(
+        error.message || 'Something went wrong. Please try again or email us directly at sales@q-dat.com.'
+      );
     }
   };
 

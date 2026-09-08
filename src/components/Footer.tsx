@@ -51,79 +51,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
-        {/* <div className="footer-section">
-          <h4>Quick Links</h4>
-          <ul className="footer-links">
-            <li>
-              <Link href="/">
-                <FaChevronRight size={12} /> Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/company">
-                <FaChevronRight size={12} /> Company
-              </Link>
-            </li>
-            <li>
-              <Link href="/services">
-                <FaChevronRight size={12} /> Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/industries">
-                <FaChevronRight size={12} /> Industries
-              </Link>
-            </li>
-            <li>
-              <Link href="/clients">
-                <FaChevronRight size={12} /> Clients
-              </Link>
-            </li>
-            <li>
-              <Link href="/careers">
-                <FaChevronRight size={12} /> Careers
-              </Link>
-            </li>
-          </ul>
-        </div> */}
 
-        {/* Core Services */}
-        {/* <div className="footer-section">
-          <h4>Our Services</h4>
-          <ul className="footer-links">
-            <li>
-              <Link href="/services">
-                <FaChevronRight size={12} /> Data Entry Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/services">
-                <FaChevronRight size={12} /> Data Management
-              </Link>
-            </li>
-            <li>
-              <Link href="/services">
-                <FaChevronRight size={12} /> ERP & Applications
-              </Link>
-            </li>
-            <li>
-              <Link href="/services">
-                <FaChevronRight size={12} /> QA & Testing
-              </Link>
-            </li>
-            <li>
-              <Link href="/services">
-                <FaChevronRight size={12} /> Web Design & Dev
-              </Link>
-            </li>
-            <li>
-              <Link href="/services">
-                <FaChevronRight size={12} /> IT Infrastructure
-              </Link>
-            </li>
-          </ul>
-        </div> */}
 
         {/* Contact Information */}
         <div className="footer-section">
@@ -138,24 +66,18 @@ export default function Footer() {
           <div className="footer-contact-item">
             <FaPhone size={16} />
             <div>
-              <strong>General:</strong> +91 80-42123783
+              <strong>General:</strong> <a href="tel:+918042123783">+91 80-42123783</a>
             </div>
           </div>
           <div className="footer-contact-item">
             <FaPhone size={16} />
             <div>
-              <strong>Sales:</strong> +91-8904090015
+              <strong>Sales:</strong> <a href="tel:+918904090015">+91-8904090015</a>
             </div>
           </div>
           <div className="footer-contact-item">
             <FaEnvelope size={16} />
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@q-dat.com&su=Enquiry%20from%20Q-DAT%20IT%20Solutions"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              sales@q-dat.com
-            </a>
+            <a href="mailto:sales@q-dat.com">sales@q-dat.com</a>
           </div>
         </div>
       </div>
