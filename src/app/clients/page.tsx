@@ -15,7 +15,7 @@ const testimonials = [
     author: 'Senior Operations Director',
     company: 'Enterprise Software Partner',
     rating: 5,
-    image: '/images/testimonials/Brian Goss.png',
+    image: '/images/testimonials/brian-goss.png',
     quote:
       'Q-Dat has been providing sales data management and outreach services for us (Applied Digital Solutions) for almost a year now and with each month I am more and more impressed with the dedication and their relentless pursuit to add value to our processes. Raghav and team go the extra mile to ensure an awesome customer experience. We are finding more and more areas where Q-Dat can help us better manage our CRM sales data. I highly recommend them!',
   },
@@ -26,7 +26,7 @@ quote: 'Working with Q-dat over the past year has been an exceptional experience
     author: 'VP of Technology',
     company: 'Global E-Commerce Brand',
     rating: 5,
-    image: '/images/testimonials/Ana BEjan.png',
+    image: '/images/testimonials/ana-bejan.png',
   },
      {
       name: 'Spree Hotels Reservations',
@@ -40,12 +40,29 @@ quote: 'Working with Q-dat over the past year has been an exceptional experience
      {
       name: 'Dnyaneshwar Darekar',
     quote:'We’ve been working with Q DAT for our data management and enrichment requirements, and their team has consistently delivered accurate, high-quality outputs on time. They understand complex business structures and maintain excellent communication throughout each project. A reliable and professional partner for any organization looking to scale data operations. Highly recommended!',
+    author: 'VP Of Information Technology',
+    company: 'Real Estate Technology Company',
+    rating: 5,
+    image: '/images/testimonials/dnyaneshwar.png',
+  },
+    {
+      name: 'Worksafe Organisation',
+    quote:
+      ' We admire their commitment to deliver, good infrastructure, talented team. They are providing un interrupted services since 8 years.',
+    author: 'Managing Director',
+    company: 'Worksafe Organisation',
+    rating: 5,
+    image: '/images/testimonials/worksafe.png',
+  },
+        {
+        name: 'Chaitanya K V ',
+    quote:
+      ' Good Quality Data Services and Excellent Team !! We like to work with them again they keep updating each and everything they have a capable team to provide very good services !!!!!!',
     author: 'Head of IT Infrastructure',
     company: 'Logistics & Supply Chain Group',
     rating: 5,
-    image: '/images/testimonials/it-infrastructure.jpg',
+    image: '/images/testimonials/chaitanya.png',
   },
-
   {
     name: 'Thaslin Milani',
     quote:
@@ -53,7 +70,7 @@ quote: 'Working with Q-dat over the past year has been an exceptional experience
     author: 'Head of IT Infrastructure',
     company: 'Logistics & Supply Chain Group',
     rating: 5,
-    image: '/images/testimonials/it-infrastructure.jpg',
+    image: '/images/testimonials/thaslin.png',
   },
 
   
@@ -64,44 +81,28 @@ quote: 'Working with Q-dat over the past year has been an exceptional experience
     author: 'Head of IT Infrastructure',
     company: 'Logistics & Supply Chain Group',
     rating: 5,
-    image: '/images/testimonials/it-infrastructure.jpg',
+    image: '/images/testimonials/ramara.png',
   },
-    {
-      name: 'Worksafe Organisation',
-    quote:
-      ' We admire their commitment to deliver, good infrastructure, talented team. They are providing un interrupted services since 8 years.',
-    author: 'Head of IT Infrastructure',
-    company: 'Logistics & Supply Chain Group',
-    rating: 5,
-    image: '/images/testimonials/it-infrastructure.jpg',
-  },
+
     {
       name: 'Veena Masurkar',
     quote:
       '"Raghav and his team helped us with all our data entry needs, which allowed us to focus on everything else we had on our plate. They were a breeze to work with, and very attentive to all the details in our requests. Overall great business!"',
-    author: 'Head of IT Infrastructure',
+    author: 'Veena Masurkar',
     company: 'Logistics & Supply Chain Group',
     rating: 5,
-    image: '/images/testimonials/it-infrastructure.jpg',
+    image: '/images/testimonials/veena.png',
   },
-      {
-        name: 'Chaitanya K V ',
-    quote:
-      ' Good Quality Data Services and Excellent Team !! We like to work with them again they keep updating each and everything they have a capable team to provide very good services !!!!!!',
-    author: 'Head of IT Infrastructure',
-    company: 'Logistics & Supply Chain Group',
-    rating: 5,
-    image: '/images/testimonials/it-infrastructure.jpg',
-  },
-      {
-          name: 'Nikhil Satish ',
-    quote:
-      ' It has been a pleasure to work with Raghav, Shweta and team. Prompt, responsive and good quality work.',
-    author: 'Head of IT Infrastructure',
-    company: 'Logistics & Supply Chain Group',
-    rating: 5,
-    image: '/images/testimonials/it-infrastructure.jpg',
-  },
+
+  //     {
+  //         name: 'Nikhil Satish ',
+  //   quote:
+  //     ' It has been a pleasure to work with Raghav, Shweta and team. Prompt, responsive and good quality work.',
+  //   author: 'Head of IT Infrastructure',
+  //   company: 'Logistics & Supply Chain Group',
+  //   rating: 5,
+  //   image: '/images/testimonials/it-infrastructure.jpg',
+  // },
 ];
 
 export default function ClientsPage() {

@@ -132,7 +132,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="info-box">
+              {/* <div className="info-box">
                 <div className="info-icon">
                   <FaClock />
                 </div>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                     09:30 AM &ndash; 06:30 PM IST
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="contact-social">
                 <a
