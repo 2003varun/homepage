@@ -44,20 +44,13 @@ export default function ProcessSection() {
           </p>
         </div>
 
-        <div className="process-container">
+        <div className="process-timeline">
           {steps.map((step, idx) => (
-            <React.Fragment key={step.num}>
-              <div className="process-card">
-                <div className="process-number">{step.num}</div>
-                <h3>{step.title}</h3>
-                <p>{step.desc}</p>
-              </div>
-              {idx < steps.length - 1 && (
-                <div className="process-arrow">
-                  <FaArrowRight />
-                </div>
-              )}
-            </React.Fragment>
+            <div className="process-card" key={step.num}>
+              <div className="process-number">0{step.num}</div>
+              <h3>{step.title}</h3>
+              <p>{step.desc}</p>
+            </div>
           ))}
         </div>
       </div>

@@ -7,42 +7,33 @@ import {
   FaArrowRight,
   FaShieldHalved,
   FaDatabase,
-  FaCode,
+  FaServer,
+  FaArrowsRotate,
   FaQuoteLeft,
   FaCheck,
   FaHeadset
 } from 'react-icons/fa6';
 import ProcessSection from '@/components/ProcessSection';
-      const heroServices = [
+const heroServices = [
   {
     title: "Data Entry",
     description: "Accurate and reliable data entry services for your business.",
-    icon: "▣",
+    icon: <FaDatabase />,
   },
   {
     title: "Data Management",
     description: "Organize, maintain and manage your business data efficiently.",
-    icon: "▤",
+    icon: <FaServer />,
   },
-  // {
-  //   title: "Web Applications",
-  //   description: "Custom web applications tailored to your business needs.",
-  //   icon: "</>",
-  // },
-  // {
-  //   title: "Cloud Infrastructure",
-  //   description: "Secure, scalable and flexible cloud solutions for your future.",
-  //   icon: "☁",
-  // },
   {
     title: "Testing",
     description: "Ensure accuracy, consistency and high-quality output.",
-    icon: "✓",
+    icon: <FaShieldHalved />,
   },
   {
     title: "Digital Transformation",
     description: "Modernize your business with smart digital solutions.",
-    icon: "↗",
+    icon: <FaArrowsRotate />,
   },
 ];
 export default function HomePage() {
@@ -56,17 +47,17 @@ export default function HomePage() {
         <div className="container hero-container">
           <div className="hero-content">
             <span className="hero-tag">
-              <FaShieldHalved /> Empowering Businesses Worldwide
+              <span className="status-dot"></span> Empowering Businesses Worldwide
             </span>
 
-            <h1 className="hero-title">
+            <h2 className="hero-title">
               Smart Solutions <br />
               <span className="gradient-text">For Modern Enterprises</span>
-            </h1>
+            </h2>
 
             <p className="hero-desc">
               Accelerate your growth with comprehensive Data Entry services, Enterprise Data
-              Management, custom web applications, robust cloud infrastructure, quality assurance,
+              Management, custom web applications, quality assurance,
               and end-to-end digital transformation.
             </p>
 
@@ -76,7 +67,8 @@ export default function HomePage() {
                 <FaArrowRight size={14} />
               </Link>
               <Link href="/services" className="btn-secondary">
-                Explore Services
+                <span>Explore Services</span>
+                <FaArrowRight size={14} />
               </Link>
             </div>
           </div>
@@ -96,21 +88,16 @@ export default function HomePage() {
           </div>
           <h3>{service.title}</h3>
           <p>{service.description}</p>
-          {/* <Link href="/services" className="hero-service-link">
-            Learn More <FaArrowRight size={11} />
-          </Link> */}
         </div>
       ))}
     </div>
-
-
   </div>
 </div>
         </div>
       </section>
 
       {/* ================= STATS BAR ================= */}
-      <section className="stats-section">
+      {/* <section className="stats-section">
         <div className="container">
           <div className="stats-grid">
             <div className="stat-item">
@@ -131,7 +118,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= ABOUT / VALUE PROPOSITIONS ================= */}
       <section className="about-section">
@@ -147,7 +134,7 @@ export default function HomePage() {
                 offer services in QA (software testing), KPO, Web Designing, IT Infrastructure, and
                 Data Management for e-commerce portals and non-voice back-office operations.
               </p>
-              <Link href="/company" className="about-btn">
+              <Link href="/company" className="btn-primary">
                 <span>Learn More About Us</span>
                 <FaArrowRight size={13} />
               </Link>
@@ -168,7 +155,7 @@ export default function HomePage() {
                 services to create sustainable business value for leading IT services providers,
                 Independent Software Vendors (ISVs), and corporate end-users worldwide.
               </p>
-              <Link href="/company#why-us" className="about-btn">
+              <Link href="/company#why-us" className="btn-primary">
                 <span>Discover Our Values</span>
                 <FaArrowRight size={13} />
               </Link>
@@ -189,7 +176,7 @@ export default function HomePage() {
                 technologies. We partner with small and medium organizations for day-to-day
                 operational efficiency to guarantee timely and accurate deliveries to their clients.
               </p>
-              <Link href="/services" className="about-btn">
+              <Link href="/services" className="btn-primary">
                 <span>Explore All Services</span>
                 <FaArrowRight size={13} />
               </Link>
@@ -211,7 +198,7 @@ export default function HomePage() {
                 timelines. Additionally, Q-DAT worked with us at every step of the way to ensure top
                 results and innovative concepts. We happily recommend Q-DAT IT Solutions.”
               </p>
-              <Link href="/clients" className="about-btn">
+              <Link href="/clients" className="btn-primary">
                 <span>Read More Testimonials</span>
                 <FaArrowRight size={13} />
               </Link>

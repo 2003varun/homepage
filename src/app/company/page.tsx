@@ -35,8 +35,7 @@ export default function CompanyPage() {
             <span className="gradient-text">Through Technology</span>
           </h1>
           <p className="hero-desc" style={{ maxWidth: '720px', margin: '0 auto 32px' }}>
-            Delivering innovative IT services, data management, application development, and quality
-            solutions that help businesses work smarter and scale faster with precision.
+           Delivering smart IT, data, and digital solutions that help businesses work smarter, scale faster, and achieve better results.
           </p>
           <div className="hero-actions" style={{ justifyContent: 'center' }}>
             <a href="#about" className="btn-primary">
@@ -90,11 +89,11 @@ export default function CompanyPage() {
 
                 <div style={{ background: 'var(--bg-alt)', padding: '20px', borderRadius: 'var(--radius-md)' }}>
                   <div style={{ color: 'var(--primary)', fontSize: '1.4rem', marginBottom: '8px' }}>
-                    <FaCode />
+                    <FaKeyboard />
                   </div>
-                  <h4 style={{ fontWeight: 700, marginBottom: '6px' }}>App Development</h4>
+                  <h4 style={{ fontWeight: 700, marginBottom: '6px' }}>Data entry</h4>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
-                    Custom, dependable software built for business needs.
+                    Fast, accurate, and secure data entry services.
                   </p>
                 </div>
               </div>

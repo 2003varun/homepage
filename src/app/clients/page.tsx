@@ -193,7 +193,7 @@ export default function ClientsPage() {
       <span className="section-badge">CLIENT VOICES</span>
 
       <h2 className="section-title">
-        What Our <span>Partners Say</span>
+        What Our <span>Clients Say</span>
       </h2>
 
       <p className="section-desc">
