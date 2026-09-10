@@ -27,7 +27,7 @@ export default function ContactPage() {
   return (
     <>
       {/* ================= CONTACT HERO ================= */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="hero-glow" />
         <div className="hero-glow-alt" />
         <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
@@ -56,7 +56,7 @@ export default function ContactPage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= CONTACT SECTION ================= */}
       <section className="contact-section" id="contact-form">

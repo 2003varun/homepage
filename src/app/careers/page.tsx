@@ -51,7 +51,7 @@ export default function CareersPage() {
   return (
     <>
       {/* ================= CAREERS HERO ================= */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="hero-glow" />
         <div className="hero-glow-alt" />
         <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
@@ -71,7 +71,7 @@ export default function CareersPage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= PERKS & CULTURE ================= */}
       <section className="about-section">

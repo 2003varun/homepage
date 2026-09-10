@@ -1,27 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaBars, FaXmark, FaPhone, FaArrowRight } from 'react-icons/fa6';
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [logoModalOpen, setLogoModalOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setLogoModalOpen(false);
-    };
-    if (logoModalOpen) {
-      window.addEventListener('keydown', handleKeyDown);
-    }
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [logoModalOpen]);
-
   const navItems = [
-    { label: 'Home', href: '/' },
     { label: 'Company', href: '/company' },
     { label: 'Services', href: '/services' },
     { label: 'Industries', href: '/industries' },
@@ -33,18 +21,14 @@ export default function Navbar() {
   const toggleMobile = () => setMobileOpen(prev => !prev);
   const closeMobile = () => setMobileOpen(false);
 
-  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    closeMobile();
-    setLogoModalOpen(true);
-  };
+
 
   return (
     <>
       <header className="site-header">
         <div className="container navbar">
           {/* Logo */}
-          <Link href="/" className="logo-link" onClick={handleLogoClick}>
+          <Link href="/" className="logo-link">
             <img src="/assets/logo.png" alt="Q-DAT IT Solutions Logo" className="logo-img" />
             <div className="logo-text">
               <span className="logo-title">Q-DAT IT Solutions</span>
@@ -94,7 +78,7 @@ export default function Navbar() {
 
       <aside className={`mobile-nav-drawer ${mobileOpen ? 'open' : ''}`}>
         <div className="mobile-nav-header">
-          <Link href="/" onClick={handleLogoClick} style={{ textDecoration: 'none' }}>
+          <Link href="/" onClick={closeMobile} style={{ textDecoration: 'none' }}>
             <div className="logo-text">
               <span className="logo-title">Q-DAT</span>
               <span className="logo-subtitle">IT Solutions</span>
@@ -138,21 +122,7 @@ export default function Navbar() {
         </div>
       </aside>
 
-      {/* Logo Lightbox Modal */}
-      {logoModalOpen && (
-        <div className="logo-modal-overlay" onClick={() => setLogoModalOpen(false)}>
-          <div className="logo-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="logo-modal-close"
-              onClick={() => setLogoModalOpen(false)}
-              aria-label="Close image"
-            >
-              <FaXmark />
-            </button>
-            <img src="/assets/logo.png" alt="Q-DAT IT Solutions Logo" className="logo-modal-img" />
-          </div>
-        </div>
-      )}
+
     </>
   );
 }

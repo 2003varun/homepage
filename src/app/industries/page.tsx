@@ -54,7 +54,7 @@ export default function IndustriesPage() {
   return (
     <>
       {/* ================= INDUSTRIES HERO ================= */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="hero-glow" />
         <div className="hero-glow-alt" />
         <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
@@ -74,7 +74,7 @@ export default function IndustriesPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= INDUSTRY CARDS ================= */}
       <section className="services-section">

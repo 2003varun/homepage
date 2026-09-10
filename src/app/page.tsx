@@ -11,29 +11,35 @@ import {
   FaArrowsRotate,
   FaQuoteLeft,
   FaCheck,
-  FaHeadset
+  FaHeadset,
+  FaGlobe,
+  FaCartShopping
 } from 'react-icons/fa6';
 import ProcessSection from '@/components/ProcessSection';
 const heroServices = [
   {
     title: "Data Entry",
-    description: "Accurate and reliable data entry services for your business.",
     icon: <FaDatabase />,
   },
   {
     title: "Data Management",
-    description: "Organize, maintain and manage your business data efficiently.",
     icon: <FaServer />,
   },
   {
+    title: "Web Applications",
+    icon: <FaGlobe />,
+  },
+  {
     title: "Testing",
-    description: "Ensure accuracy, consistency and high-quality output.",
     icon: <FaShieldHalved />,
   },
   {
     title: "Digital Transformation",
-    description: "Modernize your business with smart digital solutions.",
     icon: <FaArrowsRotate />,
+  },
+  {
+    title: "E-commerce Support",
+    icon: <FaCartShopping />,
   },
 ];
 export default function HomePage() {
@@ -42,58 +48,143 @@ export default function HomePage() {
 
       {/* ================= HERO SECTION ================= */}
       <section className="hero">
-        <div className="hero-glow" />
-        <div className="hero-glow-alt" />
-        <div className="container hero-container">
+
+        {/* Background glow */}
+        <div className="hero-bg-glow hero-bg-glow-1"></div>
+        <div className="hero-bg-glow hero-bg-glow-2"></div>
+        <div className="hero-bg-circle hero-bg-circle-1"></div>
+        <div className="hero-bg-circle hero-bg-circle-2"></div>
+
+        <div className="hero-container">
+
+          {/* LEFT SIDE */}
           <div className="hero-content">
-            <span className="hero-tag">
-              <span className="status-dot"></span> Empowering Businesses Worldwide
-            </span>
 
-            <h2 className="hero-title">
-              Smart Solutions <br />
-              <span className="gradient-text">For Modern Enterprises</span>
-            </h2>
+            {/* <div className="hero-badge">
+              <span className="badge-icon">◈</span>
+              Your Trusted IT Partner
+            </div> */}
 
-            <p className="hero-desc">
-              Accelerate your growth with comprehensive Data Entry services, Enterprise Data
-              Management, custom web applications, quality assurance,
-              and end-to-end digital transformation.
+            <h1>
+              <span className="heading-dark">Smart Solutions</span>
+              <span className="heading-blue">For Modern Enterprises</span>
+            </h1>
+
+            <p>
+              Accelerate growth with Data Entry, Data Management,
+              Web Applications, QA, and Digital Transformation.
             </p>
 
-            <div className="hero-actions">
-              <Link href="/contact" className="btn-primary">
+            <div className="hero-buttons">
+
+              <Link href="/contact" className="hero-btn hero-btn-primary">
                 <span>Contact Us</span>
-                <FaArrowRight size={14} />
+                <span className="arrow">→</span>
               </Link>
-              <Link href="/services" className="btn-secondary">
+
+              <Link href="/services" className="hero-btn hero-btn-outline">
                 <span>Explore Services</span>
-                <FaArrowRight size={14} />
+                <span className="arrow">→</span>
               </Link>
+
             </div>
+
           </div>
 
-      <div className="hero-image-wrapper">
+          {/* RIGHT SIDE */}
+          <div className="hero-visual">
 
-  <div className="hero-services-carousel">
+            <div className="orbital-system">
 
-    <div className="hero-services-track marquee-track">
-      {[...heroServices, ...heroServices].map((service, index) => (
-        <div
-          key={`${service.title}-${index}`}
-          className="hero-service-card"
-        >
-          <div className="hero-service-icon">
-            {service.icon}
+              {/* Soft center glow */}
+              <div className="orbital-glow"></div>
+
+              {/* Orbit rings */}
+              <div className="orbit-ring orbit-ring-outer"></div>
+              <div className="orbit-ring orbit-ring-middle"></div>
+              <div className="orbit-ring orbit-ring-inner"></div>
+
+         
+
+              {/* ROTATING SERVICES */}
+              <div className="service-orbit">
+
+                <div className="service-node node-1">
+                  <div className="service-icon blue">
+                    <span>▤</span>
+                  </div>
+                  <div className="service-name">
+                    Data<br/>Entry
+                  </div>
+                </div>
+
+                <div className="service-node node-2">
+                  <div className="service-icon purple">
+                    <span>◫</span>
+                  </div>
+                  <div className="service-name">
+                    Data<br/>Processing
+                  </div>
+                </div>
+
+                <div className="service-node node-3">
+                  <div className="service-icon green">
+                    <span>☁</span>
+                  </div>
+                  <div className="service-name">
+                    Web<br/>Applications
+                  </div>
+                </div>
+
+                <div className="service-node node-4">
+                  <div className="service-icon violet">
+                    <span>♢</span>
+                  </div>
+                  <div className="service-name">
+                    Testing
+                  </div>
+                </div>
+
+                <div className="service-node node-5">
+                  <div className="service-icon orange">
+                    <span>⚙</span>
+                  </div>
+                  <div className="service-name">
+                    Digitalization
+                  </div>
+                </div>
+
+                <div className="service-node node-6">
+                  <div className="service-icon purple">
+                    <span>🛒</span>
+                  </div>
+                  <div className="service-name">
+                    E-commerce<br/>Support
+                  </div>
+                </div>
+
+              </div>
+
+              {/* CENTER */}
+              <div className="orbital-center">
+
+                <div className="center-ring"></div>
+
+                <div className="logo-holder">
+                  <img
+                    src="/assets/logo.png"
+                    alt="Q-DAT IT Solutions"
+                  />
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
-          <h3>{service.title}</h3>
-          <p>{service.description}</p>
+
         </div>
-      ))}
-    </div>
-  </div>
-</div>
-        </div>
+
       </section>
 
       {/* ================= STATS BAR ================= */}
@@ -134,7 +225,7 @@ export default function HomePage() {
                 offer services in QA (software testing), KPO, Web Designing, IT Infrastructure, and
                 Data Management for e-commerce portals and non-voice back-office operations.
               </p>
-              <Link href="/company" className="btn-primary">
+              <Link href="/company" className="hero-btn hero-btn-primary">
                 <span>Learn More About Us</span>
                 <FaArrowRight size={13} />
               </Link>

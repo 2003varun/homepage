@@ -93,7 +93,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* ================= SERVICES HERO ================= */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="hero-glow" />
         <div className="hero-glow-alt" />
         <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
@@ -107,13 +107,10 @@ export default function ServicesPage() {
             infrastructure, discover how Q-DAT scales your operational efficiency.
           </p>
           <div className="hero-actions" style={{ justifyContent: 'center' }}>
-            {/* <Link href="/contact" className="btn-primary">
-              <span>Request a Quote</span>
-              <FaArrowRight size={13} />
-            </Link> */}
+        
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= SERVICES CATALOG ================= */}
       <section className="services-section">

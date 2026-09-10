@@ -25,7 +25,7 @@ export default function CompanyPage() {
   return (
     <>
       {/* ================= COMPANY HERO ================= */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="hero-glow" />
         <div className="hero-glow-alt" />
         <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
@@ -47,7 +47,7 @@ export default function CompanyPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= WHO WE ARE ================= */}
       <section className="about-section" id="about">

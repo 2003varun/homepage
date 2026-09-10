@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { FaQuoteLeft, FaStar, FaArrowRight, FaHandshake, FaAward } from 'react-icons/fa6';
+import TestimonialsGrid from './TestimonialsGrid';
 
 export const metadata: Metadata = {
   title: 'Clients | Q-DAT IT Solutions',
@@ -119,69 +120,24 @@ export default function ClientsPage() {
   return (
     <>
       {/* ================= CLIENTS HERO ================= */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="hero-glow" />
         <div className="hero-glow-alt" />
         <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
-          <span className="hero-tag">TESTIMONIALS & TRUST</span>
+          <span className="hero-tag">CLIENT VOICES</span>
           <h1 className="hero-title" style={{ fontSize: '3rem' }}>
-            Trusted by Enterprises <br />
-            <span className="gradient-text">Across the Globe</span>
-          </h1>
+             What Our 
+            <span className="gradient-text"> Clients Say</span>
+          </h1><br/>
           <p className="hero-desc" style={{ maxWidth: '720px', margin: '0 auto 32px' }}>
-            Read how Q-DAT IT Solutions helps partners optimize workflows, achieve flawless data
-            integrity, and scale their tech operations.
+        Long-term partnerships founded on trust, transparent communication,
+        and consistent delivery excellence.
           </p>
           <div className="hero-actions" style={{ justifyContent: 'center' }}>
             <Link href="/contact" className="btn-primary">
               <span>Partner with Us</span>
               <FaArrowRight size={13} />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= TESTIMONIALS GRID ================= */}
-      {/* <section className="services-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-badge">CLIENT VOICES</span>
-            <h2 className="section-title">
-              What Our <span>Partners Say</span>
-            </h2>
-            <p className="section-desc">
-              Long-term partnerships founded on trust, transparent communication, and consistent
-              delivery excellence.
-            </p>
-          </div>
-
-          <div className="services-grid">
-            {testimonials.map((testimonial, index) => (
-  <div className="testimonial-card" key={index}>
-
-    <img
-      src={testimonial.image}
-      alt="avatar"
-      className="testimonial-image"
-    />
-
-    <div className="testimonial-rating">
-      {"★".repeat(testimonial.rating)}
-    </div>
-<div className="testimonial-author">
-    <strong>{testimonial.name}</strong><br/>
-  <span>{testimonial.author}</span><br/>
-  <small>{testimonial.company}</small>
-
-    </div>
-    <p className="testimonial-quote">
-      "{testimonial.quote}"
-    </p>
-
-    
-
-  </div>
-))}
           </div>
         </div>
       </section> */}
@@ -202,55 +158,7 @@ export default function ClientsPage() {
       </p>
     </div>
 
-    <div className="services-grid testimonials-grid">
-
-      {testimonials.map((testimonial, index) => (
-        <div className="testimonial-card" key={index}>
-
-          {/* TOP */}
-          <div className="testimonial-top">
-
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              className="testimonial-image"
-            />
-
-            <div className="testimonial-rating">
-              {"★".repeat(testimonial.rating)}
-            </div>
-
-          </div>
-
-    {/* AUTHOR */}
-          <div className="testimonial-author">
-
-            <strong>
-              {testimonial.name}
-            </strong>
-
-            {/* <span>
-              {testimonial.author}
-            </span>
-
-            <small>
-              {testimonial.company}
-            </small> */}
-
-          </div>
-
-          {/* QUOTE */}
-          <p className="testimonial-quote">
-            "{testimonial.quote}"
-          </p>
-
-
-      
-
-        </div>
-      ))}
-
-    </div>
+    <TestimonialsGrid testimonials={testimonials} />
 
   </div>
 </section>
