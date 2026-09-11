@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="container navbar">
           {/* Logo */}
           <Link href="/" className="logo-link">
-            <img src="/assets/logo.png" alt="Q-DAT IT Solutions Logo" className="logo-img" />
+            <img src="/assets/f-logo.png" alt="Q-DAT IT Solutions Logo" className="logo-img" />
             <div className="logo-text">
               <span className="logo-title">Q-DAT IT Solutions</span>
               <span className="logo-subtitle"></span>
@@ -113,8 +113,8 @@ export default function Navbar() {
         <div style={{ marginTop: 'auto', paddingTop: '20px' }}>
           <Link
             href="/contact"
-            className="btn-primary"
-            style={{ width: '100%', textAlign: 'center' }}
+            className="nav-cta-btn"
+            style={{ width: '100%', textAlign: 'center', justifyContent: 'center', marginLeft: 0 }}
             onClick={closeMobile}
           >
             Contact Sales

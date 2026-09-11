@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 type Testimonial = {
   name: string;
@@ -16,53 +16,87 @@ export default function TestimonialsGrid({
 }: {
   testimonials: Testimonial[];
 }) {
-  const [expandedIndices, setExpandedIndices] = useState<number[]>([]);
+  const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
 
-  const toggleExpand = (index: number) => {
-    if (expandedIndices.includes(index)) {
-      setExpandedIndices(expandedIndices.filter((i) => i !== index));
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedTestimonial(null);
+    };
+
+    if (selectedTestimonial) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
     } else {
-      setExpandedIndices([...expandedIndices, index]);
+      document.body.style.overflow = '';
     }
-  };
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedTestimonial]);
+
+  const closeModal = () => setSelectedTestimonial(null);
 
   return (
-    <div className="services-grid testimonials-grid">
-      {testimonials.map((testimonial, index) => {
-        const isExpanded = expandedIndices.includes(index);
-
-        return (
-          <div
-            className={`testimonial-card ${isExpanded ? 'expanded' : ''}`}
-            key={index}
-          >
-            {/* TOP */}
-            <div className="testimonial-top">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="testimonial-image"
-              />
-            </div>
-
-            {/* AUTHOR */}
-            <div className="testimonial-author">
-              <strong>{testimonial.name}</strong>
-            </div>
-
-            {/* QUOTE */}
-            <p className="testimonial-quote">"{testimonial.quote}"</p>
-
-            {/* Read MORE BUTTON */}
-            <button
-              className="testimonial-see-more"
-              onClick={() => toggleExpand(index)}
+    <>
+      <div className="services-grid testimonials-grid">
+        {testimonials.map((testimonial, index) => {
+          return (
+            <div
+              className="testimonial-card"
+              key={index}
+              onClick={() => setSelectedTestimonial(testimonial)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setSelectedTestimonial(testimonial);
+                }
+              }}
+              role="button"
+              tabIndex={0}
             >
-              {isExpanded ? 'Read Less' : 'Read More'}
+              {/* TOP */}
+              <div className="testimonial-top">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="testimonial-image"
+                />
+              </div>
+
+              {/* AUTHOR */}
+              <div className="testimonial-author">
+                <strong>{testimonial.name}</strong>
+              </div>
+
+              {/* QUOTE */}
+              <p className="testimonial-quote">"{testimonial.quote}"</p>
+            </div>
+          );
+        })}
+      </div>
+
+      {selectedTestimonial && (
+        <div className="testimonial-modal-overlay" onClick={closeModal} role="dialog" aria-modal="true">
+          <div className="testimonial-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="testimonial-modal-close" onClick={closeModal} aria-label="Close">
+              &times;
             </button>
+            <div className="testimonial-modal-top">
+              <img
+                src={selectedTestimonial.image}
+                alt={selectedTestimonial.name}
+                className="testimonial-modal-image"
+              />
+              <div className="testimonial-modal-author">
+                <strong>{selectedTestimonial.name}</strong>
+              </div>
+            </div>
+            <p className="testimonial-modal-quote">"{selectedTestimonial.quote}"</p>
           </div>
-        );
-      })}
-    </div>
+        </div>
+      )}
+    </>
   );
 }

@@ -172,7 +172,7 @@ export default function HomePage() {
 
                 <div className="logo-holder">
                   <img
-                    src="/assets/logo.png"
+                    src="/assets/final-logo.png"
                     alt="Q-DAT IT Solutions"
                   />
                 </div>
@@ -246,7 +246,7 @@ export default function HomePage() {
                 services to create sustainable business value for leading IT services providers,
                 Independent Software Vendors (ISVs), and corporate end-users worldwide.
               </p>
-              <Link href="/company#why-us" className="btn-primary">
+              <Link href="/company#why-us" className="hero-btn hero-btn-primary">
                 <span>Discover Our Values</span>
                 <FaArrowRight size={13} />
               </Link>
@@ -267,7 +267,7 @@ export default function HomePage() {
                 technologies. We partner with small and medium organizations for day-to-day
                 operational efficiency to guarantee timely and accurate deliveries to their clients.
               </p>
-              <Link href="/services" className="btn-primary">
+              <Link href="/services" className="hero-btn hero-btn-primary">
                 <span>Explore All Services</span>
                 <FaArrowRight size={13} />
               </Link>
@@ -289,7 +289,7 @@ export default function HomePage() {
                 timelines. Additionally, Q-DAT worked with us at every step of the way to ensure top
                 results and innovative concepts. We happily recommend Q-DAT IT Solutions.”
               </p>
-              <Link href="/clients" className="btn-primary">
+              <Link href="/clients" className="hero-btn hero-btn-primary">
                 <span>Read More Testimonials</span>
                 <FaArrowRight size={13} />
               </Link>
