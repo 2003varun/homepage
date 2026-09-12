@@ -133,7 +133,7 @@ button, input, textarea, select {
 .logo-img {
   height: 70px;
   max-height: 150px;
-  width: auto;
+  width: 70px;
   object-fit: contain;
   transition: transform 0.3s ease;
   transform: translateY(4px);
@@ -159,16 +159,17 @@ button, input, textarea, select {
   font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 .logo-title {
-  font-family: 'Super Blocky', 'Orbitron', 'Michroma', sans-serif;
-  font-size: 18px;
-  font-weight: normal; /* Super Blocky is inherently bold */
+  font-family: 'Bungee', sans-serif;
+  font-size: 19px;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: 0.8px;
   color: #112340;
   line-height: 1;
+  text-transform: uppercase;
   text-shadow: none;
 }
 
