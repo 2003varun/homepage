@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="nav-menu">
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = pathname === item.href || (pathname?.startsWith(`${item.href}/`));
               return (
                 <Link
                   key={item.href}
@@ -96,7 +96,7 @@ export default function Navbar() {
 
         <nav className="mobile-nav-links">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href || (pathname?.startsWith(`${item.href}/`));
             return (
               <Link
                 key={item.href}

@@ -43,6 +43,39 @@ const heroServices = [
   },
 ];
 export default function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const heroImages = [
+    {
+      src: '/images/testimonials/support.png',
+      title: 'E-Commerce',
+      text: 'Product catalog management, SKU updates, inventory mapping',
+      // meta: '99.9% Accuracy Guarantee'
+    },
+    {
+      src: '/images/testimonials/e-commerce.png',
+      title: 'Finance & Admin',
+      text: 'Invoice processing, title searches, receipt indexing',
+      // meta: '24/7 Operations'
+    },
+    {
+      src: '/images/testimonials/testing.png',
+      title: 'CRM Maintenance',
+      text: 'Data cleansing, deduplication, and verification',
+      // meta: 'End-to-End QA'
+    }
+  ];
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mediaQuery.matches) return;
+
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [heroImages.length]);
+
   return (
     <>
 
@@ -94,19 +127,93 @@ export default function HomePage() {
           {/* RIGHT SIDE */}
           <div className="hero-visual">
 
+            {/* 3-CARD CROSSFADE REPLACEMENT */}
+            <div style={{ 
+              position: 'relative',
+              width: '100%',
+              maxWidth: '550px',
+              margin: '20px auto',
+              aspectRatio: '4/3', // Forces a consistent size container
+              borderRadius: '24px', 
+              boxShadow: '0 25px 50px rgba(91,146,229,0.15)', 
+              border: '2px solid rgba(91,146,229,0.2)',
+              backgroundColor: '#ffffff',
+              overflow: 'hidden'
+            }}>
+              {heroImages.map((slide, index) => (
+                <div 
+                  key={index}
+                  style={{ 
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%', 
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    backgroundColor: '#ffffff',
+                    opacity: currentSlide === index ? 1 : 0,
+                    transition: 'opacity 1s ease-in-out',
+                    zIndex: currentSlide === index ? 1 : 0
+                  }} 
+                >
+                  {/* IMAGE AREA (75%) */}
+                  <div style={{ height: '75%', width: '100%', overflow: 'hidden' }}>
+                    <img 
+                      src={slide.src} 
+                      alt={slide.title} 
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover'
+                      }} 
+                    />
+                  </div>
+                  
+                  {/* CONTENT AREA (25%) */}
+                  <div style={{
+                    height: '25%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    padding: '12px 24px',
+                    textAlign: 'left'
+                  }}>
+                    <h3 style={{
+                      margin: '0 0 4px 0',
+                      fontSize: '16px',
+                      fontWeight: 700,
+                      color: '#1e3a5f'
+                    }}>
+                      {slide.title}
+                    </h3>
+                    <p style={{
+                      margin: 0,
+                      fontSize: '13px',
+                      fontWeight: 400,
+                      color: '#5f6f82',
+                      lineHeight: 1.4,
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden'
+                    }}>
+                      {slide.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* ORBITAL SYSTEM (Commented out per request) 
             <div className="orbital-system">
 
-              {/* Soft center glow */}
               <div className="orbital-glow"></div>
 
-              {/* Orbit rings */}
               <div className="orbit-ring orbit-ring-outer"></div>
               <div className="orbit-ring orbit-ring-middle"></div>
               <div className="orbit-ring orbit-ring-inner"></div>
 
-         
-
-              {/* ROTATING SERVICES */}
               <div className="service-orbit">
 
                 <div className="service-node node-1">
@@ -165,7 +272,6 @@ export default function HomePage() {
 
               </div>
 
-              {/* CENTER */}
               <div className="orbital-center">
 
                 <div className="center-ring"></div>
@@ -180,6 +286,7 @@ export default function HomePage() {
               </div>
 
             </div>
+            */}
 
           </div>
 

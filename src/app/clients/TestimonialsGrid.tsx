@@ -72,6 +72,11 @@ export default function TestimonialsGrid({
 
               {/* QUOTE */}
               <p className="testimonial-quote">"{testimonial.quote}"</p>
+
+              {/* READ MORE BUTTON (Visual Only) */}
+              <div className="testimonial-read-more">
+                Read More
+              </div>
             </div>
           );
         })}
