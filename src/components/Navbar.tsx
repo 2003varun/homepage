@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="container navbar">
           {/* Logo */}
           <Link href="/" className="logo-link">
-            <img src="/assets/f-logo.png" alt="Q-DAT IT Solutions Logo" className="logo-img" />
+            <img src="/assets/final-logo.png" alt="Q-DAT IT Solutions Logo" className="logo-img" />
             <div className="logo-text">
               <span className="logo-title">Q-DAT IT Solutions</span>
               <span className="logo-subtitle"></span>
