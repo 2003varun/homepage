@@ -44,25 +44,27 @@ const heroServices = [
 ];
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const heroImages = [
+  const heroSlides = [
     {
       src: '/images/testimonials/support.png',
-      title: 'E-Commerce',
-      text: 'Product catalog management, SKU updates, inventory mapping',
-      // meta: '99.9% Accuracy Guarantee'
+      title: 'Accurate Data. Better Decisions.',
+      text: 'Streamline your business operations with accurate, consistent, and reliable data entry support designed to reduce manual workload and improve productivity.'
     },
     {
       src: '/images/testimonials/e-commerce.png',
-      title: 'Finance & Admin',
-      text: 'Invoice processing, title searches, receipt indexing',
-      // meta: '24/7 Operations'
+      title: 'Organize Data. Drive Efficiency.',
+      text: 'Transform scattered information into structured, reliable, and accessible business data that supports faster workflows and smarter decisions.'
     },
     {
       src: '/images/testimonials/testing.png',
-      title: 'CRM Maintenance',
-      text: 'Data cleansing, deduplication, and verification',
-      // meta: 'End-to-End QA'
-    }
+      title: 'Reliable Testing. Better Performance.',
+      text: 'Improve digital quality with detailed website testing, content verification, link integrity checks, and manual testing support.'
+    },
+    // {
+    //   src: '/images/testimonials/digital-transformation.jpg',
+    //   title: 'Modernize Operations. Accelerate Growth.',
+    //   text: 'Simplify business processes with practical digital transformation solutions that improve efficiency, consistency, and long-term scalability.'
+    // }
   ];
 
   useEffect(() => {
@@ -70,11 +72,11 @@ export default function HomePage() {
     if (mediaQuery.matches) return;
 
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [heroImages.length]);
+  }, [heroSlides.length]);
 
   return (
     <>
@@ -92,55 +94,44 @@ export default function HomePage() {
 
           {/* LEFT SIDE */}
           <div className="hero-content">
+            <div className="hero-text-slider">
+              {heroSlides.map((slide, index) => {
+                const parts = slide.title.split('. ');
+                const firstPart = parts[0] + (parts.length > 1 ? '.' : '');
+                const secondPart = parts.slice(1).join('. ');
+                return (
+                  <div 
+                    key={index} 
+                    className={`hero-text-slide ${currentSlide === index ? 'active' : ''}`}
+                  >
+                    <h1>
+                      <span className="heading-dark">{firstPart}</span>
+                      {secondPart && <span className="heading-blue">{secondPart}</span>}
+                    </h1>
 
-            {/* <div className="hero-badge">
-              <span className="badge-icon">◈</span>
-              Your Trusted IT Partner
-            </div> */}
-
-            <h1>
-              <span className="heading-dark">Smart Solutions</span>
-              <span className="heading-blue">For Modern Enterprises</span>
-            </h1>
-
-            <p>
-              Accelerate growth with Data Entry, Data Management,
-              Web Applications, QA, and Digital Transformation.
-            </p>
+                    <p>{slide.text}</p>
+                  </div>
+                );
+              })}
+            </div>
 
             <div className="hero-buttons">
-
               <Link href="/contact" className="hero-btn hero-btn-primary">
                 <span>Contact Us</span>
                 <span className="arrow">→</span>
               </Link>
-
               <Link href="/services" className="hero-btn hero-btn-outline">
                 <span>Explore Services</span>
                 <span className="arrow">→</span>
               </Link>
-
             </div>
-
           </div>
 
           {/* RIGHT SIDE */}
           <div className="hero-visual">
 
-            {/* 3-CARD CROSSFADE REPLACEMENT */}
-            <div style={{ 
-              position: 'relative',
-              width: '100%',
-              maxWidth: '550px',
-              margin: '20px auto',
-              aspectRatio: '4/3', // Forces a consistent size container
-              borderRadius: '24px', 
-              boxShadow: '0 25px 50px rgba(91,146,229,0.15)', 
-              border: '2px solid rgba(91,146,229,0.2)',
-              backgroundColor: '#ffffff',
-              overflow: 'hidden'
-            }}>
-              {heroImages.map((slide, index) => (
+            <div className="hero-image-card">
+              {heroSlides.map((slide, index) => (
                 <div 
                   key={index}
                   style={{ 
@@ -157,8 +148,8 @@ export default function HomePage() {
                     zIndex: currentSlide === index ? 1 : 0
                   }} 
                 >
-                  {/* IMAGE AREA (75%) */}
-                  <div style={{ height: '75%', width: '100%', overflow: 'hidden' }}>
+                  {/* IMAGE AREA */}
+                  <div style={{ height: '100%', width: '100%', overflow: 'hidden' }}>
                     <img 
                       src={slide.src} 
                       alt={slide.title} 
@@ -168,38 +159,6 @@ export default function HomePage() {
                         objectFit: 'cover'
                       }} 
                     />
-                  </div>
-                  
-                  {/* CONTENT AREA (25%) */}
-                  <div style={{
-                    height: '25%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    padding: '12px 24px',
-                    textAlign: 'left'
-                  }}>
-                    <h3 style={{
-                      margin: '0 0 4px 0',
-                      fontSize: '16px',
-                      fontWeight: 700,
-                      color: '#1e3a5f'
-                    }}>
-                      {slide.title}
-                    </h3>
-                    <p style={{
-                      margin: 0,
-                      fontSize: '13px',
-                      fontWeight: 400,
-                      color: '#5f6f82',
-                      lineHeight: 1.4,
-                      display: '-webkit-box',
-                      WebkitLineClamp: 2,
-                      WebkitBoxOrient: 'vertical',
-                      overflow: 'hidden'
-                    }}>
-                      {slide.text}
-                    </p>
                   </div>
                 </div>
               ))}
@@ -391,10 +350,10 @@ export default function HomePage() {
               <h2>Client Testimonial</h2>
               <p style={{ fontStyle: 'italic', position: 'relative' }}>
                 <FaQuoteLeft style={{ color: 'var(--primary)', opacity: 0.3, marginRight: '8px' }} />
-                “Q-DAT Data Entry Service team has performed exceptionally high-quality work under
+                ΓÇ£Q-DAT Data Entry Service team has performed exceptionally high-quality work under
                 very tight deadlines. They were willing to meet all our requests for changing
                 timelines. Additionally, Q-DAT worked with us at every step of the way to ensure top
-                results and innovative concepts. We happily recommend Q-DAT IT Solutions.”
+                results and innovative concepts. We happily recommend Q-DAT IT Solutions.ΓÇ¥
               </p>
               <Link href="/clients" className="hero-btn hero-btn-primary">
                 <span>Read More Testimonials</span>
